@@ -4,9 +4,10 @@ import { useEffect, useRef, useState } from 'react';
 interface SongWaveProps {
   songUrl: string;
   isPlaying: boolean;
+  volume: string;
 }
 
-const SongWave = ({ songUrl, isPlaying }: SongWaveProps) => {
+const SongWave = ({ songUrl, isPlaying, volume }: SongWaveProps) => {
   const containerRef = useRef(null);
   const [duration, setDuration] = useState('0:00');
   const [currentTime, setCurrentTime] = useState('0:00');
@@ -48,13 +49,15 @@ const SongWave = ({ songUrl, isPlaying }: SongWaveProps) => {
         const newCurrent = formatTime(wavesurfer.getCurrentTime());
         setCurrentTime(newCurrent);
       });
+
+      wavesurfer.setVolume(Number(volume) / 100);
     }
-  }, [wavesurfer]);
+  }, [wavesurfer, volume]);
 
   return (
     <div>
       <div ref={containerRef} />
-      <div className="flex justify-between text-lg">
+      <div className="flex justify-between text-lg text-10">
         <div>{currentTime}</div>
         <div>{duration}</div>
       </div>
