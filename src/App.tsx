@@ -12,7 +12,12 @@ function App() {
     <div className="flex min-h-screen flex-col items-center justify-center">
       <div className="relative mx-auto h-[22rem] w-[60rem] overflow-hidden rounded-3xl border border-05 bg-01 p-4">
         <div className="mb-[1.6rem] inline-flex gap-7 ">
-          <img className="size-[14rem] rounded-lg" src={cover} />
+          <div className="relative flex items-center justify-center">
+            <img className="size-[14rem] rounded-lg" src={cover} />
+            <button className="absolute" onClick={() => {}}>
+              <img src={pauseIcon} alt="Pause Button" />
+            </button>
+          </div>
           <div className="flex flex-col gap-11">
             <div className="flex flex-col">
               <span className="text-3xl font-bold">Yègellé Tezeta</span>
