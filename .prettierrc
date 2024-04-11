@@ -2,6 +2,5 @@
   "singleQuote": true,
   "trailingComma": "all",
   "arrowParens": "avoid",
-  "proseWrap": "preserve",
-  "plugins": ["prettier-plugin-tailwindcss"]
+  "proseWrap": "preserve"
 }
