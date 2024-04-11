@@ -1,19 +1,19 @@
 [
   {
-    "title": "Falconer",
-    "album": "Southern Roots Boogie",
+    "title": "Southern Roots Boogie",
+    "artist": "Falconer",
     "coverUrl": "src/data/falconer.png",
     "audiofile": "src/data/Falconer - Southern Roots Boogie.mp3"
   },
   {
-    "title": "Ofer Koren",
-    "album": "Sax Party",
+    "title": "Sax Party",
+    "artist": "Ofer Koren",
     "coverUrl": "src/data/sax.png",
     "audiofile": "src/data/Ofer Koren - Sax Party.mp3"
   },
   {
-    "title": "Raw",
-    "album": "Nonsense",
+    "title": "Nonsense",
+    "artist": "Raw",
     "coverUrl": "src/data/raw.png",
     "audiofile": "src/data/Raw - Nonsense.mp3"
   }
