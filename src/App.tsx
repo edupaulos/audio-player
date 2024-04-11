@@ -1,5 +1,33 @@
+import volumeUp from './assets/volumeUp.png';
+import volumeDown from './assets/volumeUp.png';
+import soundBar from './assets/soundBar.png';
+import soundWave from './assets/sound.png';
+import cover from './assets/music.svg';
+
 function App() {
-  return <></>;
+  return (
+    <div className="flex min-h-screen items-center justify-center">
+      <div className="relative mx-auto h-[22rem] w-[60rem] overflow-hidden rounded-3xl border border-05 bg-01 p-4">
+        <div className="mb-[1.6rem] inline-flex gap-7 ">
+          <img className="size-[14rem] rounded-lg" src={cover} />
+          <div className="flex flex-col gap-11">
+            <div className="flex flex-col">
+              <span className="text-3xl font-bold">Yègellé Tezeta</span>
+              <span className="text-3xl font-normal">Mulatu Astatke</span>
+            </div>
+            <img className="" src={soundWave} />
+          </div>
+        </div>
+        <div className="absolute bottom-0 left-0 right-0 border-t border-t-05 bg-02 p-[1.6rem]">
+          <div className="flex items-center justify-center gap-5">
+            <img src={volumeDown} alt="" />
+            <img className="h-[0.6rem]" src={soundBar} alt="" />
+            <img src={volumeUp} alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default App;
