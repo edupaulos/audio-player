@@ -16,7 +16,11 @@ export default {
       11: '#637471',
       12: '#111C18',
     },
-    extend: {},
+    extend: {
+      dropShadow: {
+        custom: '0rem 1.6rem 3.2rem #0000000F',
+      },
+    },
   },
   plugins: [],
 };

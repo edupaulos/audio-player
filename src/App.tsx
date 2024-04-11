@@ -25,7 +25,7 @@ function App() {
 
   return (
     <div className="flex min-h-screen flex-col items-center justify-center">
-      <div className="relative mx-auto h-[22rem] w-[60rem] overflow-hidden rounded-3xl border border-05 bg-01 p-4">
+      <div className="drop-shadow-custom relative mx-auto h-[22rem] w-[60rem] overflow-hidden rounded-3xl border border-05 bg-01 p-4">
         <div className="mb-[1.6rem] inline-flex gap-7 ">
           <div className="relative flex items-center justify-center">
             <img className="size-[14rem] rounded-lg" src={cover} />
@@ -36,7 +36,7 @@ function App() {
           <div className="flex flex-col gap-11">
             <div className="flex flex-col">
               <span className="text-3xl font-bold">{title}</span>
-              <span className="text-3xl font-normal">{artist}</span>
+              <span className="text-3xl font-normal text-10">{artist}</span>
             </div>
             <SongWave songUrl={songURL} isPlaying={isPlaying}></SongWave>
           </div>
@@ -49,7 +49,7 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="mt-6 inline-flex gap-6 rounded-3xl border border-05 bg-01 p-4">
+      <div className="drop-shadow-custom mt-6 inline-flex gap-6 rounded-3xl border border-05 bg-01 p-4">
         <button
           className="flex size-16 items-center justify-center rounded-xl text-8xl hover:bg-05 active:bg-08"
           onClick={prevSong}
