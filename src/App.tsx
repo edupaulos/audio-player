@@ -1,12 +1,15 @@
 import volumeUp from './assets/icons/volumeUp.svg';
 import volumeDown from './assets/icons/volumeDown.svg';
+import previousIcon from './assets/icons/previous.svg';
+import pauseIcon from './assets/icons/pause.svg';
+import nextIcon from './assets/icons/next.svg';
 import soundBar from './assets/soundBar.png';
 import soundWave from './assets/sound.png';
 import cover from './assets/music.svg';
 
 function App() {
   return (
-    <div className="flex min-h-screen items-center justify-center">
+    <div className="flex min-h-screen flex-col items-center justify-center">
       <div className="relative mx-auto h-[22rem] w-[60rem] overflow-hidden rounded-3xl border border-05 bg-01 p-4">
         <div className="mb-[1.6rem] inline-flex gap-7 ">
           <img className="size-[14rem] rounded-lg" src={cover} />
@@ -25,6 +28,26 @@ function App() {
             <img src={volumeUp} alt="" />
           </div>
         </div>
+      </div>
+      <div className="mt-6 inline-flex gap-6 rounded-3xl border border-05 bg-01 p-4">
+        <button
+          className="flex size-16 items-center justify-center text-8xl"
+          onClick={() => {}}
+        >
+          <img src={previousIcon} alt="Previous Button" />
+        </button>
+        <button
+          className="flex size-16 items-center justify-center text-8xl"
+          onClick={() => {}}
+        >
+          <img src={pauseIcon} alt="Pause or Button" />
+        </button>
+        <button
+          className="flex size-16 items-center justify-center text-8xl"
+          onClick={() => {}}
+        >
+          <img src={nextIcon} alt="Next Button" />
+        </button>
       </div>
     </div>
   );
