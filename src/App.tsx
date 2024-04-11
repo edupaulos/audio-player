@@ -1,5 +1,5 @@
-import volumeUp from './assets/volumeUp.png';
-import volumeDown from './assets/volumeUp.png';
+import volumeUp from './assets/icons/volumeUp.svg';
+import volumeDown from './assets/icons/volumeDown.svg';
 import soundBar from './assets/soundBar.png';
 import soundWave from './assets/sound.png';
 import cover from './assets/music.svg';
