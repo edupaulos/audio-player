@@ -24,7 +24,6 @@ export const useSongs = () => {
 
   useEffect(() => {
     const song = songRef.current;
-    song.pause();
     setCover(sounds[current].coverUrl);
     setTitle(sounds[current].title);
     setArtist(sounds[current].artist);
