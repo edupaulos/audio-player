@@ -5,16 +5,16 @@ export const useSongs = () => {
   const [current, setcurrent] = useState(0);
   const [cover, setCover] = useState(sounds[current].coverUrl);
   const [title, setTitle] = useState(sounds[current].title);
-  const [album, setAlbum] = useState(sounds[current].album);
+  const [artist, setArtist] = useState(sounds[current].artist);
   const songRef = useRef(new Audio(sounds[current].audiofile));
   const [isPlaying, setIsPlaying] = useState(false);
 
   const nextSong = () => {
     setcurrent(prev => (prev + 1) % sounds.length);
-    setIsPlaying(true);
   };
 
   const prevSong = () => {
+    if (current === 0) return;
     setcurrent(prev => (prev - 1) % sounds.length);
   };
 
@@ -24,33 +24,18 @@ export const useSongs = () => {
 
   useEffect(() => {
     const song = songRef.current;
-    if (song) {
-      if (isPlaying) {
-        song.play();
-        song.volume = 0.1;
-      } else {
-        song.pause();
-      }
-    }
-  }, [isPlaying]);
-
-  useEffect(() => {
-    const song = songRef.current;
     song.pause();
     setCover(sounds[current].coverUrl);
     setTitle(sounds[current].title);
-    setAlbum(sounds[current].album);
+    setArtist(sounds[current].artist);
     song.src = sounds[current].audiofile;
-
-    if (isPlaying) {
-      song.play();
-    }
   }, [current, isPlaying]);
 
   return {
+    songURL: sounds[current].audiofile,
     cover,
     title,
-    album,
+    artist,
     isPlaying,
     prevSong,
     nextSong,
