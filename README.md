@@ -1,7 +1,8 @@
 # Audio player
 
-This repository contains the source code for the Audio Player challenge proposed by [Significa](https://significa.co/).
-You can find more details above.
+This repository contains the source code for the Audio Player challenge proposed by [Significa](https://significa.co/). The project includes an audio player to play songs from the `data` folder. You can play, pause, skip forward and backward, adjust volume, and view song information.
+
+You can find more details above. ⬇️
 
 ## Layout Preview
 <img width="884" alt="Application Layout" src="UI.png">
@@ -12,7 +13,7 @@ Additionally to the prototype, I added a play icon that you can find in the fold
 
 ## Technologies Used
 
-There are the framework/tools, that were chosen to build the solution:
+Here you can find the framework/tools, that were chosen to build the solution:
 - [React](https://react.dev/) - used as the main framework to construct the application logic;
 - [Vite](https://react.dev/) - used to create the boilerplate and run the project;
 - [Tailwindcss](https://tailwindcss.com/) - used to build the project styles quickly;
@@ -24,7 +25,7 @@ There are the framework/tools, that were chosen to build the solution:
 
 1. Clone the repository: `git clone https://github.com/edupaulos/audio-player.git`;
 2. Enter in the project folder: `cd audio-player`;
-3. Run `yarn wizard` ✨ -> this will install depencencies and run the project;
+3. Run `yarn wizard` ✨ -> this will install dependencies and run the project;
 
 ## Usage
 
@@ -33,9 +34,11 @@ There are the framework/tools, that were chosen to build the solution:
 
 ## To be improved
 
-- UI perfectionism
-- Attention to detail
-
+- Optimize the wavesurfer implementation;
+- Add unit test with [istanbul](https://jestjs.io/) and coverage with [istanbul](https://istanbul.js.org/)
+- Implement shuffle and repeat;
+- On music completed change to next one;
+- Implement a UI volume controller closer to the prototype. This may be easier with a component lib since the tailwind doesn't provide much customization to the input rage.
 
 ## Audio assets
 
