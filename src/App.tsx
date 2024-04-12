@@ -8,6 +8,7 @@ import { useSongs } from './hooks/useSongs';
 import SongWave from './components/SongWave';
 import PainelControl from './components/PainelControl';
 import { useState } from 'react';
+import Button from './components/ui/button';
 
 function App() {
   const {
@@ -31,9 +32,12 @@ function App() {
         <div className="mb-[1.6rem] inline-flex gap-7 ">
           <div className="relative flex items-center justify-center">
             <img className="size-[14rem] rounded-lg" src={cover} />
-            <button className="absolute" onClick={togglePlay}>
-              <img src={isPlaying ? pauseIcon : playIcon} alt={altPlayBtn} />
-            </button>
+            <Button
+              className="absolute"
+              onClick={togglePlay}
+              img={isPlaying ? pauseIcon : playIcon}
+              alt={altPlayBtn}
+            />
           </div>
           <div className="flex flex-col gap-11">
             <div className="flex flex-col">
