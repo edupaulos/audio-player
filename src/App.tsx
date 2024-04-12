@@ -33,7 +33,7 @@ function App() {
           <div className="relative flex items-center justify-center">
             <img className="size-[14rem] rounded-lg" src={cover} />
             <Button
-              className="absolute"
+              className="absolute size-[4.8rem]"
               onClick={togglePlay}
               img={isPlaying ? pauseIcon : playIcon}
               alt={altPlayBtn}
